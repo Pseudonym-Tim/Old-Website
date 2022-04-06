@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>About Me</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <script type = "text/javascript" src="test.js"></script>  
+
+    </head>
+
+    <body>
+        <!-- Layout! -->
+        <div id="nav-bar">
+            <ul>
+                <li onclick="GoToPage('index')"><span>Home</span></li>
+                <li onclick="GoToPage('projects')"><span>Projects</span></li>
+                <li onclick="GoToPage('art')"><span>Art</span></li>
+                <li onclick="GoToPage('music')"><span>Music</span></li>
+            </ul>
+        </div>
+
+        <!-- Middle content -->
+        <div class="middle-content">
+            <div id="content">
+                <img src="img/Me.png" alt="Avatar" class="avatar" onclick="playAudio('sfx/bark.wav')">
+                <h1>About Me</h1>
+                <h5>You can go anywhere. You can be anyone. Who do you want to be today? Please see universal leaflet for more information.</h5>
+                <hr>
+                <p>Hi there! Tim isn't my real name, my real name is actually Coleton. I'm a self taught programmer, modder, and indie game developer.
+                     However, I also dabble in art and music sometimes, even if I'm terrible at it. I love writing code and solving problems, and have interests 
+                     in computer hardware and electrical engineering. Usually I work on stuff in the Unity game engine as it's my favorite thing to work in and
+                     what I'm most experienced with. Most of the time I work on games, small experiments for fun, mods for various games, and tools.
+                </p>
+                <h3>Skills/Experience:</h3>
+                <div id="list">
+                    <ul>
+                        <li>C#, C++ Programming</li>
+                        <li>HTML, CSS, Javascript</li>
+                        <li>Game Design/Development</li>
+                        <li>Unity Engine Game Development</li>
+                        <li>Source Engine Game Development</li>
+                        <li>Pixel Art</li>
+                        <li>Music</li>
+                    </ul>
+                </div>
+                <br>
+                <h3>Favorite Games:</h3>
+                <div id="list">
+                    <ul>
+                        <li>The Binding Of Isaac (Rebirth-Repentance)</li>
+                        <li>Postal 2</li>
+                        <li>Payday 2</li>
+                        <li>Portal 2</li>
+                        <li>Lisa The Painful</li>
+                        <li>Hotline Miami</li>
+                        <li>Bioshock 2</li>
+                        <li>Team Fortress 2</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-footer">
+            <p>Copyright ©2021 - Obligatory footer enterprises -</p>
+        </div>
+    </body>
+</html>
+    

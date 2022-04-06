@@ -1,0 +1,588 @@
+@font-face
+{
+	font-family: HackSan;
+	src: url(fnt/Hack-NamSan.ttf);
+}
+
+@font-face
+{
+    font-family: OneLight;
+    src: url(fnt/KGOneMoreLightBIG.ttf);
+}
+
+@keyframes wiggle
+{
+    0% { transform: rotate(-1.5deg); }
+    50% { transform: rotate(1.5deg); }
+    100% { transform: rotate(-1.5deg); }
+}
+
+@keyframes shake 
+{
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+  @keyframes glitch {
+    0% {
+      
+    }
+    2% {
+        transform: skewx(10deg);
+        transform: rotateY(-20deg) rotateX(5deg) rotateZ(2deg);
+    }
+    3%{
+        transform: rotateY(20deg) rotateX(0deg) rotateZ(0);
+    }
+    100%
+    {
+        transform: none;
+    }
+  }
+
+@keyframes wobble 
+{
+    0%, 100% { transform: translateY(0px) }
+    25%  {transform: translateY(-3px)}
+    75%  {transform: translateY(3px)}
+}
+
+@keyframes pulse 
+{
+    25% { transform: scale(1.1); }
+    75% { transform: scale(.9); }
+}
+
+@keyframes wobble2
+{
+    0%
+    {
+      transform: rotateY(-20deg) rotateX(5deg) rotateZ(2deg);
+    }
+    
+    50%
+    {
+      transform: rotateY(20deg) rotateX(0deg) rotateZ(0);
+    }
+    
+    100%
+    {
+       transform: rotateY(-20deg)   rotateX(5deg) rotateZ(2deg);
+    }
+}
+
+@keyframes slide_in 
+{
+    0% { opacity: 0; transform: translateY(-500%); }
+    60% { opacity: 0.5; transform: translateY(0%); }
+    80% { transform: none; opacity: 1; }
+    90% { scale: 235; }
+}
+
+@keyframes spinny
+{
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes unfold-horizontal
+{
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+@keyframes fold-horizontal
+{
+    0% { width: 100%; }
+    100% { width: 0%; }
+}
+
+body
+{
+    background-color: #161413;
+    color: #e0e0e0;
+    margin: 0;
+
+    font-family: HackSan;
+}
+
+.center 
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+hr
+{
+    border: 4px dashed #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+h1
+{
+    font-size: 300%;
+
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    color: #e0e0e0;
+}
+
+h3
+{
+    font-size: 100%;
+
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    color: #e0e0e0;
+}
+
+h2
+{
+    font-size: 100%;
+
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    color: #e0e0e0;
+}
+
+h4
+{
+    font-size: 500%;
+
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    color: #e0e0e0;
+}
+
+h6
+{
+    font-size: 150%;
+
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    color: #e0e0e0;
+    
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+h5
+{
+    font-size: 125%;
+
+    text-align: center;
+    color: #e0e0e0;
+
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+#list > ul
+{
+    padding: 10px;
+    list-style-type: disc;
+
+    width: 25%;
+
+    margin: 0 auto;
+}
+
+#list li:not(:last-child) 
+{
+    margin-bottom: 5px;
+}
+
+#list2 li:not(:last-child) 
+{
+    margin-bottom: 10px;
+}
+
+/*h1::before, h2::before, h4::before, h5::before, h6::before
+{
+    content: url("img/deco-left.png");
+ 
+}
+
+h1::after, h2::after, h4::after, h5::after, h6::after
+{
+    content: url("img/deco-right.png");
+
+}*/
+
+#arts body 
+{
+    margin: 0;
+}
+
+#arts .image-grid 
+{
+    --gap: 32px;
+    --num-cols: 4;
+    --row-height: 300px;
+  
+    box-sizing: border-box;
+    padding: var(--gap);
+  
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+}
+
+a
+{
+    color:rgb(255, 251, 0);
+    text-underline-offset: 5px;
+}
+
+#arts .image-grid > img 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    border: 5px solid #ccc;
+    background: rgb(24, 24, 24);
+}
+
+#arts .image-grid-col-2 
+{
+    grid-column: span 2;
+}
+
+#arts .image-grid-row-2 
+{
+    grid-row: span 2;
+}
+
+@media screen and (max-width: 1024px) 
+{
+    #arts .image-grid 
+    {
+        --num-cols: 2;
+        --row-height: 200px;
+    }
+}
+
+div.top-dawg
+{
+    text-align: center;
+    
+    /* BG */
+    height: 100vh;
+    margin: 0;
+    padding: 0 0 0 0;
+    
+    background-image: url("img/Background.png");
+    background-color: rgb(255, 255, 255);
+    background-repeat: repeat;
+    background-position-x: center; /* center the pix plz */
+    background-attachment: fixed;
+    background-size: 90%;
+    
+    overflow: hidden;
+    
+    z-index: 1;
+    position: relative;
+    box-shadow: 0 -21px 42px 21px black;
+}
+
+div.top-dawg::after
+{
+	content: "";
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	height: 100%;
+	width: 100%;
+
+    background-image: url("img/bg-diamond.png");
+    background-repeat: repeat;
+}
+
+.avatar
+{
+    width: 125px;
+    height: 125px;
+    border-radius: 10%;
+
+    border: 5px solid rgb(15, 15, 15);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 10px 10px #161413;
+
+    cursor: url(img/Cursor2.png) 11 4, auto;
+
+    animation-name: wiggle;
+    animation-duration: 1.02s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.avatar:hover
+{
+    animation-name: shake;
+    animation-duration: 0.1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    cursor: url(img/Cursor3.png) 11 4, auto;
+}
+
+#big-title
+{
+	line-height: 1em;
+    font-size: 8vw;
+    font-family: OneLight;
+
+    margin: calc(50vh - 0.5em - 32px) 0;
+    
+    text-shadow: 0 0.15em 0.05em #000000;
+    
+    position: relative;
+    z-index: 2;
+
+    color: #e0e0e0;
+
+    animation: slide_in 0.7s linear, 0.5s pulse 0.5s ease-in-out infinite
+}
+
+* { box-sizing: border-box }
+
+.mySlides { display: none }
+img { vertical-align: middle; }
+
+.slideshow-container 
+{
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+  border: 5px solid #ccc;
+}
+
+.prev, .next 
+{
+  cursor: url(img/Cursor2.png) 11 4, auto;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+audio
+{
+    display: none;
+}
+
+#small-title
+{
+	line-height: 1em;
+    font-size: 8em;
+    font-family: OneLight;
+
+    margin: calc(50vh - 0.5em - 32px) 0;
+    
+    text-shadow: 0 0.15em 0.05em #000000;
+    
+    position: relative;
+    z-index: 2;
+
+    color: #e0e0e0;
+
+    animation: slide_in 0.7s linear, 0.5s pulse 0.5s ease-in-out infinite;
+}
+
+#nav-bar
+{   
+	position: relative;
+	z-index: 2;
+    height: 64px;
+    font-size: 1.25em;
+    text-decoration-line: underline;
+    text-underline-offset: 5px;
+    text-shadow: 0 0.15em #000000;
+
+    margin: 0;
+    padding: 0;
+}
+
+#nav-bar ul
+{
+    height: 100%;
+    
+    margin: 0;
+    padding: 0 5%;
+    background-color: #292929;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    box-shadow: 0 0 84px 21px #161413;
+}
+
+#playlist
+{
+    list-style: none;
+    text-align: center;
+    margin: 0 auto;
+
+    animation-name: wiggle;
+    animation-duration: 1.02s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+#playlist li a
+{
+    color: #e0e0e0;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+
+    font-size: 125%;
+
+    cursor: url(img/Cursor2.png) 11 4, auto;
+}
+
+#playlist li:not(:last-child) 
+{
+    margin-bottom: 15px;
+}
+
+#playlist .current-song a
+{
+    color: #919191;
+
+    font-size: 145%;
+}
+
+#audioPlayer
+{
+    animation-name: wiggle;
+    animation-duration: 1.02s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+    cursor: url(img/Cursor2.png) 11 4, auto;
+}
+
+#playlist .current-song
+{
+    animation-name: shake;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+html 
+{
+    cursor: url(img/Cursor.png) 11 4, auto;
+}
+  
+#nav-bar li
+{
+    transition-duration: 0.25s;
+    
+    width: 100%;
+    height: inherit;
+    padding: auto 0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#nav-bar li::after
+{
+    /* This is hella important; Make sure that you use content to render! */
+
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    
+}
+
+#nav-bar li:hover
+{
+    transition-duration: 0.5s;
+    background-color: #161413;
+
+    cursor: url(img/Cursor2.png) 11 4, auto;
+}
+
+#nav-bar li:hover span
+{ 
+    animation-name: shake;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#nav-bar span
+{
+    margin: auto;
+
+    animation-name: wiggle;
+    animation-duration: 1.02s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    
+}
+
+div.middle-content
+{
+    margin: auto;
+    width: 100%;
+    height: 2000px;
+    background-color: rgb(43, 39, 38);
+    text-shadow: 0 0.3em 0.2em #000000;
+    
+    display: table;
+}
+
+div #content
+{
+    /* Add padding to contents */
+    padding: 2em;
+}
+
+div.bottom-footer
+{
+    text-align: center;
+    font-size: 0.8em;
+
+    /* Fancy colours */
+    background-color: rgb(43, 41, 46);
+    color: slategray;
+
+    /* No margin, Solid plz */
+    margin: 0;
+    padding: 1em;
+}

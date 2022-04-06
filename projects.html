@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Projects</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type = "text/javascript" src="test.js"></script>  
+<style>
+
+.projects {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat(3, 1fr); }
+
+  .projects .item
+  {
+  
+    opacity:0.8;
+  }
+
+  .projects .item:hover
+  {
+    animation-name: wiggle;
+    animation-duration: 1.02s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    cursor: url(img/Cursor2.png) 11 4, auto;
+    transition: 0.25s;
+    opacity:1;
+  }
+
+  .projects .item a
+  {
+    cursor: url(img/Cursor2.png) 11 4, auto;
+  }
+
+  .projects img 
+  {
+    width: 100%;
+    border: 3px rgb(255, 255, 255) solid; 
+    cursor: url(img/Cursor2.png) 11 4, auto;
+
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }
+    
+    .projects img:hover {
+      border-color: #d3d3d3; 
+      
+      background-color:#000;
+      
+    }
+
+    .btn {
+      box-sizing: border-box;
+      appearance: none;
+      background-color: transparent;
+      border: none;
+      border-radius: 0.2em;
+      color: rgb(0, 0, 0);
+      cursor: url(img/Cursor2.png) 11 4, auto;
+      background-color: rgb(214, 214, 214);
+      display: flex;
+      align-self: center;
+      font-size: 1rem;
+  
+      line-height: 0.5;
+      margin: 20px;
+      padding: 1em 2em;
+      text-decoration: none;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: 'HackSan';
+
+      display: block;
+      margin: 0 auto;
+}
+
+</style>
+</head>
+<body>
+    <div id="nav-bar">
+      <ul>
+          <li onclick="GoToPage('index')"><span>Home</span></li>
+          <li onclick="GoToPage('about_me')"><span>About Me</span></li>
+          <li onclick="GoToPage('art')"><span>Art</span></li>
+          <li onclick="GoToPage('music')"><span>Music</span></li>
+      </ul>
+  </div>
+
+  <div class="middle-content">
+    <div id="content">
+     
+      <h1>Projects</h1>
+      <h5>Solo and collaborative projects that I think are significant enough to show! Select one for more details!</h5>
+      <hr>
+      <br>
+
+      <div class="projects">
+
+        <div class="item">
+          <a href="catharsis_reborn.html">
+            <img src="img/proj_thumb/CR.png" style="max-width:40%;" class ="center" alt="Project">
+            <h6>
+              Catharsis Reborn
+            </h6>
+          </a>
+          </a>
+        </div>
+
+        <div class="item">
+          <a href="rong.html">
+            <img src="img/proj_thumb/rong.PNG" style="max-width:100%;" class ="center" alt="Project">
+            <h6>
+              RONG
+            </h6>
+          </a>
+        </div>
+
+        <div class="item">
+          <a href="usodc.html">
+            <img src="img/proj_thumb/devcon.PNG" style="max-width:75%;" class ="center" alt="Project">
+            <h6 style="font-size: 1.25em;">
+              Unity Scriptable Object Developer Console
+            </h6>
+          </a>
+
+        </div>
+
+        <div class="item">
+          <a href="DREDGER.html">
+            <img src="img/proj_thumb/dredger.png" style="max-width:100%;" class ="center" alt="Project">
+            <h6>
+              DREDGER
+            </h6>
+          </a>
+        </div>
+
+        <div class="item">
+          <a href="umsple.html">
+            <img src="img/proj_thumb/mspaintle.PNG" style="max-width:100%;" class ="center" alt="Project">
+            <h6>
+              Unity MSPaint Level Editor
+            </h6>
+          </a>
+        </div>
+
+        <!--<div class="item">
+          <a href="ultrapatch.html">
+            <img src="img/proj_thumb/ultrapatchlogo.png" style="max-width:125%;background-color: rgb(24, 24, 24); width: 90%" class ="center" alt="Project">
+            <h6>
+              Postal III Ultrapatch
+            </h6>
+          </a>
+        </div>-->
+
+        <div class="item">
+          <a href="postal2recreation.html">
+            <img src="img/proj_thumb/postal2misc.gif" style="max-width:100%;" class ="center" alt="Project">
+            <h6>
+              Unity Postal 2 Inventory/Misc Recreation
+            </h6>
+          </a>
+        </div>
+
+        <div class="item">
+          <a href="proctextex.html">
+            <img src="img/proj_thumb/proctex.PNG" style="max-width:100%;" class ="center" alt="Project">
+            <h6>
+              Unity Procedural Textures Experiment
+            </h6>
+          </a>
+        </div>
+
+      </div>
+    </div>  
+  </div>
+</div>
+
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+
+</script>
+  <div class="bottom-footer">
+      <p>Copyright ©2021 - Obligatory footer enterprises -</p>
+  </div>
+</body>
+</html> 
