@@ -6,9 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="style2.css">
-
-<script type = "text/javascript" src="main.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -21,17 +19,17 @@ function toggleFunction()
     else { x.className = x.className.replace(" w3-show", ""); }
 }
 </script>
-
-<!-- Navbar (sits on top) -->
+   
+<!-- Sticky navbar... -->
 <div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-<div class="w3-bar w3-darkish w3-wide w3-padding w3-card">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-    <i class="fa fa-bars"></i>
-  </a>
-    
-  <a href="index.html" class="w3-bar-item w3-button"><b>Pseudonym_Tim</b> </a>
-    
+    <div class="w3-bar" id="myNavbar">
+  <div class="w3-bar w3-darkish w3-wide w3-padding w3-card">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+      
+    <a href="index.html" class="w3-bar-item w3-button"><b>Pseudonym_Tim</b> </a>
+      
   <!-- Float links to the right. Hide them on small screens -->
   <div class="w3-right w3-hide-small">
     <a href="index.html" class="w3-bar-item w3-button">Home</a>
@@ -51,12 +49,25 @@ function toggleFunction()
     </div>
   </div>
 </div>
-    
-<!-- Page content -->
+
+<!-- Page content and padding... -->
 <div class="w3-content w3-padding" style="max-width:1564px">
 
-  <div class="w3-container w3-padding-32 w3-display-middle">
-    <p id="splash-text">You shouldn't be able to read this!</p>
+  <!-- Blog section... -->
+  <div class="w3-container w3-padding-64" id="blog">
+    <h3 class="w3-border-bottom w3-padding-small">Technical breakdowns and ramblings...</h3>
+    <div class="column">
+      <h2><b>New Website!</b></h2>
+        <h5>11/5/2022</h5>
+        <img 
+            class="croppedImage";
+            src= "images/engineer_gaming.png" style="width:100%;"/>
+      <p class="center">
+          Introducing the new website and the plans I have for it!
+        </p>
+          <p class="center paddingBottom">
+          <a href="blog_[11-5-2022].html"><b>READ MORE...</b></a>
+        </p>
+    </div>
+    
   </div>
-  <script src="main.js"></script>
-</body>

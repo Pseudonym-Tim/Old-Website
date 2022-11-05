@@ -1,216 +1,163 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Projects</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script type = "text/javascript" src="test.js"></script>  
-<style>
+<title>Pseudonym_Tim</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style2.css">
 
-.projects {
-  display: grid;
-  grid-gap: 0.5rem;
-  grid-template-columns: repeat(3, 1fr); }
-
-  .projects .item
-  {
-  
-    opacity:0.8;
-  }
-
-  .projects .item:hover
-  {
-    animation-name: wiggle;
-    animation-duration: 1.02s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    cursor: url(img/Cursor2.png) 11 4, auto;
-    transition: 0.25s;
-    opacity:1;
-  }
-
-  .projects .item a
-  {
-    cursor: url(img/Cursor2.png) 11 4, auto;
-  }
-
-  .projects img 
-  {
-    width: 100%;
-    border: 3px rgb(255, 255, 255) solid; 
-    cursor: url(img/Cursor2.png) 11 4, auto;
-
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-  }
-    
-    .projects img:hover {
-      border-color: #d3d3d3; 
-      
-      background-color:#000;
-      
-    }
-
-    .btn {
-      box-sizing: border-box;
-      appearance: none;
-      background-color: transparent;
-      border: none;
-      border-radius: 0.2em;
-      color: rgb(0, 0, 0);
-      cursor: url(img/Cursor2.png) 11 4, auto;
-      background-color: rgb(214, 214, 214);
-      display: flex;
-      align-self: center;
-      font-size: 1rem;
-  
-      line-height: 0.5;
-      margin: 20px;
-      padding: 1em 2em;
-      text-decoration: none;
-      text-align: center;
-      text-transform: uppercase;
-      font-family: 'HackSan';
-
-      display: block;
-      margin: 0 auto;
-}
-
-</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div id="nav-bar">
-      <ul>
-          <li onclick="GoToPage('index')"><span>Home</span></li>
-          <li onclick="GoToPage('about_me')"><span>About Me</span></li>
-          <li onclick="GoToPage('art')"><span>Art</span></li>
-          <li onclick="GoToPage('music')"><span>Music</span></li>
-      </ul>
-  </div>
 
-  <div class="middle-content">
-    <div id="content">
-     
-      <h1>Projects</h1>
-      <h5>Solo and collaborative projects that I think are significant enough to show! Select one for more details!</h5>
-      <hr>
-      <br>
-
-      <div class="projects">
-
-        <div class="item">
-          <a href="catharsis_reborn.html">
-            <img src="img/proj_thumb/CR.png" style="max-width:40%;" class ="center" alt="Project">
-            <h6>
-              Catharsis Reborn
-            </h6>
-          </a>
-          </a>
-        </div>
-
-        <div class="item">
-          <a href="rong.html">
-            <img src="img/proj_thumb/rong.PNG" style="max-width:100%;" class ="center" alt="Project">
-            <h6>
-              RONG
-            </h6>
-          </a>
-        </div>
-
-        <div class="item">
-          <a href="usodc.html">
-            <img src="img/proj_thumb/devcon.PNG" style="max-width:75%;" class ="center" alt="Project">
-            <h6 style="font-size: 1.25em;">
-              Unity Scriptable Object Developer Console
-            </h6>
-          </a>
-
-        </div>
-
-        <div class="item">
-          <a href="DREDGER.html">
-            <img src="img/proj_thumb/dredger.png" style="max-width:100%;" class ="center" alt="Project">
-            <h6>
-              DREDGER
-            </h6>
-          </a>
-        </div>
-
-        <div class="item">
-          <a href="umsple.html">
-            <img src="img/proj_thumb/mspaintle.PNG" style="max-width:100%;" class ="center" alt="Project">
-            <h6>
-              Unity MSPaint Level Editor
-            </h6>
-          </a>
-        </div>
-
-        <!--<div class="item">
-          <a href="ultrapatch.html">
-            <img src="img/proj_thumb/ultrapatchlogo.png" style="max-width:125%;background-color: rgb(24, 24, 24); width: 90%" class ="center" alt="Project">
-            <h6>
-              Postal III Ultrapatch
-            </h6>
-          </a>
-        </div>-->
-
-        <div class="item">
-          <a href="postal2recreation.html">
-            <img src="img/proj_thumb/postal2misc.gif" style="max-width:100%;" class ="center" alt="Project">
-            <h6>
-              Unity Postal 2 Inventory/Misc Recreation
-            </h6>
-          </a>
-        </div>
-
-        <div class="item">
-          <a href="proctextex.html">
-            <img src="img/proj_thumb/proctex.PNG" style="max-width:100%;" class ="center" alt="Project">
-            <h6>
-              Unity Procedural Textures Experiment
-            </h6>
-          </a>
-        </div>
-
-      </div>
-    </div>  
+<script>
+// (Used to toggle the menu on small screens when clicking on the menu button)
+function toggleFunction() 
+{
+    var x = document.getElementById("navDemo");
+    if(x.className.indexOf("w3-show") == -1) { x.className += " w3-show"; } 
+    else { x.className = x.className.replace(" w3-show", ""); }
+}
+</script>
+   
+<!-- Sticky navbar... -->
+<div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+  <div class="w3-bar w3-darkish w3-wide w3-padding w3-card">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+      
+    <a href="index.html" class="w3-bar-item w3-button"><b>Pseudonym_Tim</b> </a>
+      
+  <!-- Float links to the right. Hide them on small screens -->
+  <div class="w3-right w3-hide-small">
+    <a href="index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="projects.html" class="w3-bar-item w3-button">Projects</a>
+    <a href="blog.html" class="w3-bar-item w3-button">Blog</a>
+    <a href="about_me.html" class="w3-bar-item w3-button">About Me</a>
+    <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
   </div>
 </div>
 
-<script>
-  var slideIndex = 1;
-  showSlides(slideIndex);
-
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}    
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-  }
-
-</script>
-  <div class="bottom-footer">
-      <p>Copyright ©2021 - Obligatory footer enterprises -</p>
+    <div id="navDemo" class="w3-bar-block w3-darkish w3-hide w3-hide-large w3-hide-medium">
+      <a href="index.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>
+      <a href="projects.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Projects</a>
+      <a href="blog.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Blog</a>
+      <a href="about_me.html" class="w3-bar-item w3-button" onclick="toggleFunction()">About Me</a>
+      <a href="contact.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Contact</a>
+    </div>
   </div>
-</body>
-</html> 
+</div>
+
+<!-- Page content and padding... -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  <!-- Blog section... -->
+  <div class="w3-container w3-padding-64" id="blog">
+    <h3 class="w3-border-bottom w3-padding-small">Collaborative and solo projects...</h3>
+
+    <div class="column w3-padding-32">
+      <img class="croppedImage centerImage" src= "images/CR.png" style="width:70%;height:70%"/>
+      <h2 class="center"><b>Catharsis Reborn</b></h2>
+      <p class="center">
+      A total conversion mod for Postal III, one of the worst games of all time...
+    </p>
+      <ul style="line-height:150%;text-align: center;padding: 0px;">
+        <li><a href="catharsis-reborn.html"><b>MORE INFO...</b></a></li><br>
+      </ul>
+      </p>
+    </div>
+    
+  <div class="column w3-padding-32">
+    <img class="croppedImage" src= "images/excavator.png" style="width:100%;"/>
+    <h2 class="center"><b>EXCAVATOR</b></h2>
+    <p class="center">
+    A retro dungeon crawler FPS where you descend deeper and deeper underground to obtain treasures for a greedy mega corporation...
+  </p>
+    <ul style="line-height:150%;text-align: center;padding: 0px;">
+      <li><a href="excavator.html"><b>MORE INFO...</b></a></li><br>
+    </ul>
+    </p>
+</div>
+
+  <div class="column w3-padding-32">
+      <img class="croppedImage" src= "images/rong3.png" style="width:100%;"/>
+      <h2 class="center"><b>RONG</b></h2>
+      <p class="center">
+      An action packed 2D top-down rougelite shooter mixed with elements of games like Breakout and Pinball...
+      </p>
+      <ul style="line-height:150%;text-align: center;padding: 0px;">
+        <li><a href="rong.html"><b>MORE INFO...</b></a></li><br>
+      </ul>
+      </p>
+  </div>
+
+<div class="column w3-padding-32">
+  <img class="croppedImage centerImage" src= "images/dogpettingsim.png" style="width:100%;height:100%"/>
+  <h2 class="center"><b>DOG PETTING SIMULATOR</b></h2>
+  <p class="center">
+  A retro rougelite action arcade FPS where you break into people's houses and pet their dogs! Inspired by games like Hotline-Miami and DOOM!
+</p>
+  <ul style="line-height:150%;text-align: center;padding: 0px;">
+    <li><a href="dog-petting-simulator.html"><b>MORE INFO...</b></a></li><br>
+  </ul>
+  </p>
+</div>
+
+<div class="column w3-padding-32">
+  <img class="croppedImage centerImage" src= "images/dredger.png" style="width:90%;"/>
+  <h2 class="center"><b>DREDGER</b></h2>
+  <p class="center">
+    An old school rougelite dungeon crawler with real-time warioware-esque minigames!
+  </p>
+    <ul style="line-height:150%;text-align: center;padding: 0px;">
+      <li><a href="dredger.html"><b>MORE INFO...</b></a></li><br>
+      <li><a href="https://pseudonym-tim.itch.io/dredger"><b>VIEW ON ITCH.IO...</b></a></li><br>
+    </ul>
+  </p>
+</div>
+
+<div class="column w3-padding-32">
+  <img class="croppedImage centerImage" src= "images/voxellator.png" style="width:100%;"/>
+  <h2 class="center"><b>Unity Sprite Voxellator Tool</b></h2>
+  <p class="center">
+  A tool for the Unity editor that turns sprites into 3D voxel meshes!
+  </p>
+    <p class="center">
+      <ul style="line-height:150%;text-align: center;padding: 0px;">
+        <li><a href="unity-voxellator.html"><b>MORE INFO...</b></a></li><br>
+        <li><a href="https://github.com/Pseudonym-Tim/Unity-Sprite-Voxellator"><b>VIEW ON GITHUB...</b></a></li><br>
+      </ul>
+  </p>
+</div>
+
+<div class="column w3-padding-32">
+  <img class="croppedImage centerImage" src= "images/p3script.PNG" style="width:100%;"/>
+  <h2 class="center"><b>Postal3Script Language Documentation</b></h2>
+  <p class="center">
+  In-depth MkDocs documentation on the unique scripting language of Postal 3...
+</p>
+    <p class="center">
+      <ul style="line-height:150%;text-align: center;padding: 0px;">
+        <li><a href="postal3script.html"><b>MORE INFO...</b></a></li><br>
+        <li><a href="https://whackjobint.github.io/postal3script/"><b>READ DOCUMENTATION...</b></a></li>
+      </ul>
+    </p>
+</div>
+
+<div class="column w3-padding-32">
+  <img class="croppedImage centerImage" src= "images/devcon.png" style="width:100%;"/>
+  <h2 class="center"><b>Unity Scriptable Object Developer Console</b></h2>
+  <p class="center">
+  A feature rich easy to use Scriptable-Object based developer console for Unity!
+</p>
+    <p class="center">
+      <ul style="line-height:150%;text-align: center;padding: 0px;">
+        <li><a href="unity-sodc.html"><b>MORE INFO...</b></a></li><br>
+        <li><a href="https://github.com/Pseudonym-Tim/Unity-Scriptable-Object-Developer-Console"><b>VIEW ON GITHUB...</b></a></li><br>
+      </ul>
+  </p>
+</div>
+</div>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pseudonym_Tim</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style2.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<script>
+// (Used to toggle the menu on small screens when clicking on the menu button)
+function toggleFunction() 
+{
+    var x = document.getElementById("navDemo");
+    if(x.className.indexOf("w3-show") == -1) { x.className += " w3-show"; } 
+    else { x.className = x.className.replace(" w3-show", ""); }
+}
+</script>
+
+<!-- Navbar (sits on top) -->
+<div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+  <div class="w3-bar w3-darkish w3-wide w3-padding w3-card">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+      
+    <a href="index.html" class="w3-bar-item w3-button"><b>Pseudonym_Tim</b> </a>
+      
+  <!-- Float links to the right. Hide them on small screens -->
+  <div class="w3-right w3-hide-small">
+    <a href="index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="projects.html" class="w3-bar-item w3-button">Projects</a>
+    <a href="blog.html" class="w3-bar-item w3-button">Blog</a>
+    <a href="about_me.html" class="w3-bar-item w3-button">About Me</a>
+    <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+  </div>
+</div>
+
+    <div id="navDemo" class="w3-bar-block w3-darkish w3-hide w3-hide-large w3-hide-medium">
+      <a href="index.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>
+      <a href="projects.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Projects</a>
+      <a href="blog.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Blog</a>
+      <a href="about_me.html" class="w3-bar-item w3-button" onclick="toggleFunction()">About Me</a>
+      <a href="contact.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Contact</a>
+    </div>
+  </div>
+</div>
+    
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  <!-- Blog section... -->
+  <div class="w3-container w3-padding-32" id="blog">
+  </div>
+    
+<!-- Header -->
+<div>
+<h1 style="font-size: 50px" class="center"><b>New Website!</b></h1>
+</div>
+<div>
+<h4 class="center">Nov 5, 2022 - Written by Pseudonym_Tim</h4>
+<div class="paddingBottom">
+</div>
+    <p class="oneColumnP">
+      <img class="largeCroppedImage centerImage" src= "images/engineer_gaming.png" style="width:75%;height:75%;"/>
+      <br>
+      I decided that it was time to ditch my old website and create a new one, so here we are! It's a bit rough at the time of writing this,
+      but I think it's pretty good for what I have in mind right now... Real professional looking! Eventually I think I'll add pages for my music and artwork...
+      <br>
+      <br>
+      Anywho, If it wasn't already obvious, this website is basically just a glorified personal portfolio. A place where I can show off all the things I worked on,
+      and host downloads of stuff... 
+      <br>
+      <br>
+      Oh yeah, this is the first blog post on the website! I thought that it'd be neat to have a blog, a place to basically ramble about anything I want!
+      Going forward, I'm going to try to make semi-frequent blog posts about various things, maybe someone will find some stuff I write about interesting, maybe not. It's probably
+      just going to be a lot of programming stuff, technical post-mortems and things like that. Either way it's 
+      an opportunity to satisfy the mansplaining demons in my head!
+      <br>
+      <br>
+      Alright, well I still have some stuff to do before I consider this website finished, mostly organization and cleanup stuff... bye-bye!
+    </p>
+    </div>
+    <div>

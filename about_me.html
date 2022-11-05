@@ -1,69 +1,93 @@
 <!DOCTYPE html>
-
 <html>
-    <head>
-        <title>About Me</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="style.css">
+<head>
+<title>Pseudonym_Tim</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style2.css">
 
-        <script type = "text/javascript" src="test.js"></script>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
 
-    </head>
+<script>
+// (Used to toggle the menu on small screens when clicking on the menu button)
+function toggleFunction() 
+{
+    var x = document.getElementById("navDemo");
+    if(x.className.indexOf("w3-show") == -1) { x.className += " w3-show"; } 
+    else { x.className = x.className.replace(" w3-show", ""); }
+}
+</script>
 
-    <body>
-        <!-- Layout! -->
-        <div id="nav-bar">
-            <ul>
-                <li onclick="GoToPage('index')"><span>Home</span></li>
-                <li onclick="GoToPage('projects')"><span>Projects</span></li>
-                <li onclick="GoToPage('art')"><span>Art</span></li>
-                <li onclick="GoToPage('music')"><span>Music</span></li>
-            </ul>
-        </div>
+<!-- Navbar (sits on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+<div class="w3-bar w3-darkish w3-wide w3-padding w3-card">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+    <i class="fa fa-bars"></i>
+  </a>
 
-        <!-- Middle content -->
-        <div class="middle-content">
-            <div id="content">
-                <img src="img/Me.png" alt="Avatar" class="avatar" onclick="playAudio('sfx/bark.wav')">
-                <h1>About Me</h1>
-                <h5>You can go anywhere. You can be anyone. Who do you want to be today? Please see universal leaflet for more information.</h5>
-                <hr>
-                <p>Hi there! Tim isn't my real name, my real name is actually Coleton. I'm a self taught programmer, modder, and indie game developer.
-                     However, I also dabble in art and music sometimes, even if I'm terrible at it. I love writing code and solving problems, and have interests 
-                     in computer hardware and electrical engineering. Usually I work on stuff in the Unity game engine as it's my favorite thing to work in and
-                     what I'm most experienced with. Most of the time I work on games, small experiments for fun, mods for various games, and tools.
-                </p>
-                <h3>Skills/Experience:</h3>
-                <div id="list">
-                    <ul>
-                        <li>C#, C++ Programming</li>
-                        <li>HTML, CSS, Javascript</li>
-                        <li>Game Design/Development</li>
-                        <li>Unity Engine Game Development</li>
-                        <li>Source Engine Game Development</li>
-                        <li>Pixel Art</li>
-                        <li>Music</li>
-                    </ul>
-                </div>
-                <br>
-                <h3>Favorite Games:</h3>
-                <div id="list">
-                    <ul>
-                        <li>The Binding Of Isaac (Rebirth-Repentance)</li>
-                        <li>Postal 2</li>
-                        <li>Payday 2</li>
-                        <li>Portal 2</li>
-                        <li>Lisa The Painful</li>
-                        <li>Hotline Miami</li>
-                        <li>Bioshock 2</li>
-                        <li>Team Fortress 2</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="bottom-footer">
-            <p>Copyright ©2021 - Obligatory footer enterprises -</p>
-        </div>
-    </body>
-</html>
+  <a href="index.html" class="w3-bar-item w3-button"><b>Pseudonym_Tim</b> </a>
+
+  <!-- Float links to the right. Hide them on small screens -->
+  <div class="w3-right w3-hide-small">
+    <a href="index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="projects.html" class="w3-bar-item w3-button">Projects</a>
+    <a href="blog.html" class="w3-bar-item w3-button">Blog</a>
+    <a href="about_me.html" class="w3-bar-item w3-button">About Me</a>
+    <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+  </div>
+</div>
+
+    <div id="navDemo" class="w3-bar-block w3-darkish w3-hide w3-hide-large w3-hide-medium">
+      <a href="index.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>
+      <a href="projects.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Projects</a>
+      <a href="blog.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Blog</a>
+      <a href="about_me.html" class="w3-bar-item w3-button" onclick="toggleFunction()">About Me</a>
+      <a href="contact.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Contact</a>
+    </div>
+  </div>
+</div>
     
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  <!-- Blog Section -->
+  <div class="w3-container w3-padding-64">
+    <h3 class="w3-border-bottom w3-padding-small">About Me</h3>
+      <p>I'm a self taught programmer, modder, and indie game developer.
+        However, I also dabble in art and music sometimes, even if I'm terrible at it. I love writing code and solving problems, I have interests 
+        in computer hardware and electrical engineering as well. Usually I work on stuff in the Unity game engine as it's my favorite thing to work in and
+        what I'm most experienced with. Most of the time I work on games, small experiments for fun, mods, and tools.
+        <br>
+        <br>
+        I'm currently one of the programmers <a href="https://twitter.com/WhackJob_Int"><b>@Whackjob Interactive</b></a>, working on Catharsis Reborn!
+   </p>
+   <br>
+   <h4>Skills/Experience:</h4>
+    <ul style="line-height:165%; padding-left: 0">
+      <li>C#, C++, and Python Programming</li>
+      <li>HTML, CSS, Javascript</li>
+      <li>Game Design/Development</li>
+      <li>Unity Engine Game Development</li>
+      <li>Source Engine Modding</li>
+      <li>Pixel Art</li>
+      <li>Music</li>
+    </ul>
+   <br>
+   <h4>Favorite Games:</h4>
+   <ul style="line-height:165%; padding-left: 0">
+    <li>The Binding Of Isaac</li>
+    <li>Postal 2</li>
+    <li>Payday 2</li>
+    <li>Portal 2</li>
+    <li>Lisa The Painful</li>
+    <li>Hotline Miami</li>
+    <li>Terraria</li>
+    <li>Minecraft</li>
+    <li>Bioshock 2</li>
+    <li>Team Fortress 2</li>
+  </ul>
+</div>
