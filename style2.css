@@ -1,5 +1,5 @@
 /* Create two equal columns that floats next to each other */
-.column 
+.column
 {
   float: left;
   width: 50%;
@@ -183,21 +183,22 @@ p.big
   padding: 16px 32px;
 }
 
-.container 
+/*
+.container2
 {
   position: relative;
   width: 50%;
 }
 
-.container:hover .image 
+.container2:hover .image 
 {
   opacity: 0.3;
 }
 
-.container:hover .overlayTextImage 
+.container2:hover .overlayTextImage 
 {
   opacity: 1;
-}
+}*/
 
 /* column resize for smaller screens */
 @media screen and (max-width: 1000px) 

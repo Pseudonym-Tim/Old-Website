@@ -20,9 +20,7 @@ function getRandomSplashMessage()
     'Free tortillas!',
     'Yummy! Asbestos watercolors!',
     'Making bathub meth!',
-    "ARDUOUS DUEL, PERMANENT HUMAN!",
-    "I just got TRACTOR-JACKED by a CRYPTOMANIAC!",
-    "Yikes! He just WHACKED me with a WARM WEINER! TWICE!"
+    "ARDUOUS DUEL, PERMANENT HUMAN!"
   ];
 
   return quotes[Math.floor((Math.random() * quotes.length))];

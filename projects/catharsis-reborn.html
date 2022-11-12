@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pseudonym_Tim</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/style2.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<script>
+// (Used to toggle the menu on small screens when clicking on the menu button)
+function toggleFunction() 
+{
+    var x = document.getElementById("navi");
+    if(x.className.indexOf("show") == -1) { x.className += " show"; } 
+    else { x.className = x.className.replace(" show", ""); }
+}
+</script>
+
+<!-- Navbar (sits on top) -->
+<div class="top">
+  <div class="bar" id="myNavbar">
+<div class="bar darkish wide padding card">
+    <a class="bar-item button hover-black hide-medium hide-large right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+    <i class="fa fa-bars"></i>
+  </a>
+
+  <a href="/index.html" class="bar-item button"><b>Pseudonym_Tim</b> </a>
+
+  <!-- Float links to the right. Hide them on small screens -->
+  <div class="right hide-small">
+    <a href="/index.html" class="bar-item button">Home</a>
+    <a href="/projects.html" class="bar-item button">Projects</a>
+    <a href="/blog.html" class="bar-item button">Blog</a>
+    <a href="/about_me.html" class="bar-item button">About Me</a>
+    <a href="/contact.html" class="bar-item button">Contact</a>
+  </div>
+</div>
+
+    <div id="navi" class="bar-block darkish hide hide-large hide-medium">
+      <a href="/index.html" class="bar-item button" onclick="toggleFunction()">Home</a>
+      <a href="/projects.html" class="bar-item button" onclick="toggleFunction()">Projects</a>
+      <a href="/blog.html" class="bar-item button" onclick="toggleFunction()">Blog</a>
+      <a href="/about_me.html" class="bar-item button" onclick="toggleFunction()">About Me</a>
+      <a href="/contact.html" class="bar-item button" onclick="toggleFunction()">Contact</a>
+    </div>
+  </div>
+</div>
+    
+<!-- Page content -->
+<div class="content padding" style="max-width:1564px">
+
+  <!-- Blog Section -->
+  <div class="container padding-64">
+    <h3 class="border-bottom padding-small">Catharsis Reborn</h3>
+    <p>
+      Catharsis Reborn is a total conversion mod for Postal III that acts as a free unofficial sequel to POSTAL 2 and its expansion, Apocalypse Weekend. 
+      The mod overhauls vanilla Postal III by fixing numerous base game bugs, introducing an all new story, new maps, missions, weapons and more, 
+      based on both our own original designs and early previews of Postal III from 2007-2009. Like POSTAL 2, CR's gameplay is designed around an open world which 
+      can be freely explored in-between missions.
+      <br>
+      <br>
+      I'm currently one of the programmers <a href="https://twitter.com/WhackJob_Int"><b>@Whackjob Interactive</b></a>, working on Catharsis Reborn!
+      <br>
+      <br>
+      Check out the Catharsis Reborn website for more details: <a href="https://whackjobint.github.io/CatharsisReborn"><b>https://whackjobint.github.io/CatharsisReborn</b></a>
+   </p>
+   <div class="column padding-32">
+    <img class="croppedImage" src= "/img/projects/catharsis-reborn/cr2.jpg" style="width:100%;"/>
+  </div>
+  <div class="column padding-32">
+    <img class="croppedImage" src= "/img/projects/catharsis-reborn/cr4.png" style="width:100%;"/>
+  </div>  
+  <div class="column padding-32">
+    <img class="croppedImage" src= "/img/projects/catharsis-reborn/cr3.png" style="width:90%;"/>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pseudonym_Tim</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/style2.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<script>
+// (Used to toggle the menu on small screens when clicking on the menu button)
+function toggleFunction() 
+{
+    var x = document.getElementById("navi");
+    if(x.className.indexOf("show") == -1) { x.className += " show"; } 
+    else { x.className = x.className.replace(" show", ""); }
+}
+</script>
+
+<!-- Navbar (sits on top) -->
+<div class="top">
+  <div class="bar" id="myNavbar">
+<div class="bar darkish wide padding card">
+    <a class="bar-item button hover-black hide-medium hide-large right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+    <i class="fa fa-bars"></i>
+  </a>
+
+  <a href="/index.html" class="bar-item button"><b>Pseudonym_Tim</b> </a>
+
+  <!-- Float links to the right. Hide them on small screens -->
+  <div class="right hide-small">
+    <a href="/index.html" class="bar-item button">Home</a>
+    <a href="/projects.html" class="bar-item button">Projects</a>
+    <a href="/blog.html" class="bar-item button">Blog</a>
+    <a href="/about_me.html" class="bar-item button">About Me</a>
+    <a href="/contact.html" class="bar-item button">Contact</a>
+  </div>
+</div>
+
+    <div id="navi" class="bar-block darkish hide hide-large hide-medium">
+      <a href="/index.html" class="bar-item button" onclick="toggleFunction()">Home</a>
+      <a href="/projects.html" class="bar-item button" onclick="toggleFunction()">Projects</a>
+      <a href="/blog.html" class="bar-item button" onclick="toggleFunction()">Blog</a>
+      <a href="/about_me.html" class="bar-item button" onclick="toggleFunction()">About Me</a>
+      <a href="/contact.html" class="bar-item button" onclick="toggleFunction()">Contact</a>
+    </div>
+  </div>
+</div>
+    
+<!-- Page content -->
+<div class="content padding" style="max-width:1564px">
+
+  <!-- Blog Section -->
+  <div class="container padding-64">
+    <h3 class="border-bottom padding-small">DOG PETTING SIMULATOR</h3>
+    <p>DOG PETTING SIMULATOR is a whacky retro rougelite action arcade FPS where you break into people's houses and pet their dogs! Inspired by Hotline-Miami and DOOM!
+   </p>
+   <div class="column padding-32">
+    <img class="croppedImage" src= "/img/projects/dog-petting-sim/dogpettingsim.png" style="width:100%;"/>
+  </div>
+</div>

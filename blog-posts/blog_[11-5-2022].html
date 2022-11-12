@@ -4,10 +4,9 @@
 <title>Pseudonym_Tim</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="style2.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/style2.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -15,47 +14,47 @@
 // (Used to toggle the menu on small screens when clicking on the menu button)
 function toggleFunction() 
 {
-    var x = document.getElementById("navDemo");
-    if(x.className.indexOf("w3-show") == -1) { x.className += " w3-show"; } 
-    else { x.className = x.className.replace(" w3-show", ""); }
+    var x = document.getElementById("navi");
+    if(x.className.indexOf("show") == -1) { x.className += " show"; } 
+    else { x.className = x.className.replace(" show", ""); }
 }
 </script>
 
 <!-- Navbar (sits on top) -->
-<div class="w3-top">
-    <div class="w3-bar" id="myNavbar">
-  <div class="w3-bar w3-darkish w3-wide w3-padding w3-card">
-      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+<div class="top">
+    <div class="bar" id="navBar">
+  <div class="bar darkish wide padding card">
+      <a class="bar-item button hover-black hide-medium hide-large right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
       
-    <a href="index.html" class="w3-bar-item w3-button"><b>Pseudonym_Tim</b> </a>
+    <a href="/index.html" class="bar-item button"><b>Pseudonym_Tim</b> </a>
       
   <!-- Float links to the right. Hide them on small screens -->
-  <div class="w3-right w3-hide-small">
-    <a href="index.html" class="w3-bar-item w3-button">Home</a>
-    <a href="projects.html" class="w3-bar-item w3-button">Projects</a>
-    <a href="blog.html" class="w3-bar-item w3-button">Blog</a>
-    <a href="about_me.html" class="w3-bar-item w3-button">About Me</a>
-    <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+  <div class="right hide-small">
+    <a href="/index.html" class="bar-item button">Home</a>
+    <a href="/projects.html" class="bar-item button">Projects</a>
+    <a href="/blog.html" class="bar-item button">Blog</a>
+    <a href="/about_me.html" class="bar-item button">About Me</a>
+    <a href="/contact.html" class="bar-item button">Contact</a>
   </div>
 </div>
 
-    <div id="navDemo" class="w3-bar-block w3-darkish w3-hide w3-hide-large w3-hide-medium">
-      <a href="index.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>
-      <a href="projects.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Projects</a>
-      <a href="blog.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Blog</a>
-      <a href="about_me.html" class="w3-bar-item w3-button" onclick="toggleFunction()">About Me</a>
-      <a href="contact.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Contact</a>
+    <div id="navi" class="bar-block darkish hide hide-large hide-medium">
+      <a href="/index.html" class="bar-item button" onclick="toggleFunction()">Home</a>
+      <a href="/projects.html" class="bar-item button" onclick="toggleFunction()">Projects</a>
+      <a href="/blog.html" class="bar-item button" onclick="toggleFunction()">Blog</a>
+      <a href="/about_me.html" class="bar-item button" onclick="toggleFunction()">About Me</a>
+      <a href="/contact.html" class="bar-item button" onclick="toggleFunction()">Contact</a>
     </div>
   </div>
 </div>
     
 <!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px">
+<div class="content padding" style="max-width:1564px">
 
   <!-- Blog section... -->
-  <div class="w3-container w3-padding-32" id="blog">
+  <div class="container padding-32" id="blog">
   </div>
     
 <!-- Header -->
@@ -67,7 +66,7 @@ function toggleFunction()
 <div class="paddingBottom">
 </div>
     <p class="oneColumnP">
-      <img class="largeCroppedImage centerImage" src= "images/engineer_gaming.png" style="width:75%;height:75%;"/>
+      <img class="largeCroppedImage centerImage" src= "/img/blog/blog_[11-5-2022]/engineer_gaming.png" style="width:75%;height:75%;"/>
       <br>
       I decided that it was time to ditch my old website and create a new one, so here we are! It's a bit rough at the time of writing this,
       but I think it's pretty good for what I have in mind right now... Real professional looking! Eventually I think I'll add pages for my music and artwork...
