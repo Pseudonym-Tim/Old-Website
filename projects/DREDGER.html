@@ -14,7 +14,7 @@
 // (Used to toggle the menu on small screens when clicking on the menu button)
 function toggleFunction() 
 {
-    var x = document.getElementById("navDemo");
+    var x = document.getElementById("navi");
     if(x.className.indexOf("show") == -1) { x.className += " show"; } 
     else { x.className = x.className.replace(" show", ""); }
 }
@@ -22,7 +22,7 @@ function toggleFunction()
 
 <!-- Navbar (sits on top) -->
 <div class="top">
-  <div class="bar" id="myNavbar">
+  <div class="bar" id="navBar">
 <div class="bar darkish wide padding card">
     <a class="bar-item button hover-black hide-medium hide-large right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
     <i class="fa fa-bars"></i>
@@ -39,7 +39,7 @@ function toggleFunction()
     <a href="/contact.html" class="bar-item button">Contact</a>
   </div>
 </div>
-    <div id="navDemo" class="bar-block darkish hide hide-large hide-medium">
+    <div id="navi" class="bar-block darkish hide hide-large hide-medium">
       <a href="/index.html" class="bar-item button" onclick="toggleFunction()">Home</a>
       <a href="/projects.html" class="bar-item button" onclick="toggleFunction()">Projects</a>
       <a href="/blog.html" class="bar-item button" onclick="toggleFunction()">Blog</a>
