@@ -4,8 +4,8 @@
 <title>Pseudonym_Tim</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/Website/style.css">
-<link rel="stylesheet" href="/Website/style2.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/style2.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -28,25 +28,25 @@ function toggleFunction()
       <i class="fa fa-bars"></i>
     </a>
       
-    <a href="/Website/index.html" class="bar-item button"><b>Pseudonym_Tim</b> </a>
+    <a href="/index.html" class="bar-item button"><b>Pseudonym_Tim</b> </a>
 
   <!-- Float links to the right. Hide them on small screens -->
   <div class="right hide-small">
-    <a href="/Website/index.html" class="bar-item button">Home</a>
-    <a href="/Website/projects.html" class="bar-item button">Projects</a>
-    <a href="/Website/music.html" class="bar-item button">Music</a>
-    <a href="/Website/blog.html" class="bar-item button">Blog</a>
-    <a href="/Website/about_me.html" class="bar-item button">About Me</a>
-    <a href="/Website/contact.html" class="bar-item button">Contact</a>
+    <a href="/index.html" class="bar-item button">Home</a>
+    <a href="/projects.html" class="bar-item button">Projects</a>
+    <a href="/music.html" class="bar-item button">Music</a>
+    <a href="/blog.html" class="bar-item button">Blog</a>
+    <a href="/about_me.html" class="bar-item button">About Me</a>
+    <a href="/contact.html" class="bar-item button">Contact</a>
   </div>
 </div>
     <div id="navi" class="bar-block darkish hide hide-large hide-medium">
-      <a href="/Website/index.html" class="bar-item button" onclick="toggleFunction()">Home</a>
-      <a href="/Website/projects.html" class="bar-item button" onclick="toggleFunction()">Projects</a>
-      <a href="/Website/music.html" class="bar-item button" onclick="toggleFunction()">Music</a>
-      <a href="/Website/blog.html" class="bar-item button" onclick="toggleFunction()">Blog</a>
-      <a href="/Website/about_me.html" class="bar-item button" onclick="toggleFunction()">About Me</a>
-      <a href="/Website/contact.html" class="bar-item button" onclick="toggleFunction()">Contact</a>
+      <a href="/index.html" class="bar-item button" onclick="toggleFunction()">Home</a>
+      <a href="/projects.html" class="bar-item button" onclick="toggleFunction()">Projects</a>
+      <a href="/music.html" class="bar-item button" onclick="toggleFunction()">Music</a>
+      <a href="/blog.html" class="bar-item button" onclick="toggleFunction()">Blog</a>
+      <a href="/about_me.html" class="bar-item button" onclick="toggleFunction()">About Me</a>
+      <a href="/contact.html" class="bar-item button" onclick="toggleFunction()">Contact</a>
     </div>
   </div>
 </div>
@@ -67,7 +67,7 @@ function toggleFunction()
     
 </div>
     <p class="oneColumnP">
-      <img class="croppedImage centerImage" src="/Website/img/projects/excavator/excavator.png" style="width:100%; max-width:50%"/>
+      <img class="croppedImage centerImage" src="/img/projects/excavator/excavator.png" style="width:100%; max-width:50%"/>
       <br>
      Alright, so I've been working on this game for a bit called EXCAVATOR. It's basically an old-school dungeon crawler,
      so it's supposed to be a retro experience. I decided that the controls should be as simplified
@@ -82,7 +82,7 @@ function toggleFunction()
      quick and easy function in it's API for that?". And yeah, actually, it does. <strong>Display.SetParams</strong> allows you to set the x and y position of a Display's game window...
      <br>
      <br>
-     <img class="croppedImage centerImage" src="/Website/img/blog/blog_(11-13-2022)/unity-display-params.png" style="width:100%; max-width:100%"/>
+     <img class="croppedImage centerImage" src="/img/blog/blog_(11-13-2022)/unity-display-params.png" style="width:100%; max-width:100%"/>
      <br>
      Is it performant to call this function for every frame that we want to shake the window? Is it the proper way to do this sorta thing? No idea! Either way, knowing that it's that easy kinda ruined the fun for me, 
       so naturally I figured I'd make my life way harder by importing some Windows API functions and using those instead. At least then I'm actually
@@ -95,28 +95,28 @@ function toggleFunction()
        all the stuff I need in it's own static class inside of <strong>WindowShaker.cs</strong>:
        <br>
        <br>
-       <img class="croppedImage centerImage" src="/Website/img/blog/blog_(11-13-2022)/window-stuff-class.png" style="width:100%; max-width:80%"/>
+       <img class="croppedImage centerImage" src="/img/blog/blog_(11-13-2022)/window-stuff-class.png" style="width:100%; max-width:80%"/>
        <br>
       Alright, so now that we imported those functions, we can use them to actually move the game window now! 
       First we need to find and store the pointer for the game window, plus store some more info that we'll be using, we can just do this on <strong>Awake()</strong> like so:
       <br>
       <br>
-      <img class="croppedImage centerImage" src="/Website/img/blog/blog_(11-13-2022)/awake.png" style="width:100%; max-width:80%"/>
+      <img class="croppedImage centerImage" src="/img/blog/blog_(11-13-2022)/awake.png" style="width:100%; max-width:80%"/>
       <br>
-      <img class="croppedImage centerImage" src="/Website/img/blog/blog_(11-13-2022)/setup-window-info.png" style="width:100%; max-width:70%"/>
+      <img class="croppedImage centerImage" src="/img/blog/blog_(11-13-2022)/setup-window-info.png" style="width:100%; max-width:70%"/>
       <br>
       Now that we stored the pointer for the game window and set up some window info, in our main Shake function, we can just do some calculations
       for the shake that frame and then pass our parameters into <strong>MoveWindow</strong>...
       <br>
       <br>
-      <img class="croppedImage centerImage" src="/Website/img/blog/blog_(11-13-2022)/shake-func.png" style="width:100%; max-width:90%"/>
+      <img class="croppedImage centerImage" src="/img/blog/blog_(11-13-2022)/shake-func.png" style="width:100%; max-width:90%"/>
       <br>
       And voilà! it works! It shakes with a specified intensity and for a certain amount of time, then returns back to
       it's original position! <br>Here's some (very old) gameplay test footage of EXCAVATOR to show you how the final effect looks:
       <br>
       <br>
       <video class="video" width="100%" autoplay loop muted filter>
-        <source src="/Website/img/blog/blog_(11-13-2022)/shake_test.mp4" type="video/mp4">
+        <source src="/img/blog/blog_(11-13-2022)/shake_test.mp4" type="video/mp4">
       Your browser does not support the video tag.
       </video>
       <br>
@@ -125,7 +125,7 @@ function toggleFunction()
       After tearing all of my hair out and becoming completely bald, I came across a tickbox in the project settings labeled: "Use DXGI flip model swapchain for D3D11". 
       <br>
       <br>
-      <img class="croppedImage centerImage" src="/Website/img/blog/blog_(11-13-2022)/bitblit.png" style="width:100%; max-width:70%"/>
+      <img class="croppedImage centerImage" src="/img/blog/blog_(11-13-2022)/bitblit.png" style="width:100%; max-width:70%"/>
       <br>
       Disabling this fixed the issue and made the window shake as smooth as butter! Why? I have no idea! This is supposed to be a performance enhancement for rendering in windowed mode! Weird!
       I seriously doubt anyone on earth has came across this specific problem...
