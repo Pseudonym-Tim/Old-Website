@@ -155,7 +155,7 @@ function toggleFunction()
       <img class="croppedImage centerImage" src="/Website/img/blog/blog_(12-25-2022)/grass.png" style="width:100%; max-width:55%"/>
       <br>
       <br>
-      The <code>y < (((x * x * 3 + x * 81) >> 2) & 3) + 19</code> condition essentially sets all the pixels
+      The <code>y < (((x * x * 3 + x * 81) >> 2) & 3) + 18</code> condition essentially sets all the pixels
       that are meant to be the top of the grass block to a greenish grassy color. Also most pixels near the top of what is going to be the side texture are 
       set to be a greenish grassy color as well, in a sorta "zig-zag" pattern from the bottom, depending on the x coordinate of the pixel evaluated like so:
       <li>For x values of 0 to 7, the range is 19 to 22</li>
@@ -174,9 +174,9 @@ function toggleFunction()
       <li>B = Bottom of grass block</li>
       </div>
       <br>
-      The dark green is all the pixels that are set by the <code>y < (((x * x * 3 + x * 81) >> 2) & 3) + 19</code> condition! The pixels that aren't set are the default brown color that 
+      The dark green is all the pixels that are set by the <code>y < (((x * x * 3 + x * 81) >> 2) & 3) + 18</code> condition! The pixels that aren't set are the default brown color that 
       every texture initially has!
-      Finally, all that is done next is the same check except instead of adding 19 it only adds 18, and since this
+      Finally, all that is done next is the same check except instead of adding 18 it adds 19, and since this
       check is in an else if statement, this causes us to only care only about the pixels underneath the ones placed in the previous check.
       Those pixels are darkened by a third, giving the grassy parts more depth by darkening the dirt pixels directly underneath!
       <br>
