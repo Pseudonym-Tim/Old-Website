@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pseudonym_Tim</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/Website/style.css">
+<link rel="stylesheet" href="/Website/style2.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<script>
+// (Used to toggle the menu on small screens when clicking on the menu button)
+function toggleFunction() 
+{
+    var x = document.getElementById("navi");
+    if(x.className.indexOf("show") == -1) { x.className += " show"; } 
+    else { x.className = x.className.replace(" show", ""); }
+}
+</script>
+
+<!-- Navbar (sits on top) -->
+<div class="top">
+    <div class="bar" id="navBar">
+  <div class="bar darkish wide padding card">
+      <a class="bar-item button hover-black hide-medium hide-large right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+      
+    <a href="/Website/index.html" class="bar-item button"><b>Pseudonym_Tim</b> </a>
+
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="right hide-small">
+      <a href="/Website/index.html" class="bar-item button">Home</a>
+      <a href="/Website/projects.html" class="bar-item button">Projects</a>
+      <a href="/Website/music.html" class="bar-item button">Music</a>
+      <a href="/Website/art.html" class="bar-item button">Art</a>
+      <a href="/Website/blog.html" class="bar-item button">Blog</a>
+      <a href="/Website/about_me.html" class="bar-item button">About Me</a>
+      <a href="/Website/contact.html" class="bar-item button">Contact</a>
+    </div>
+  </div>
+      <div id="navi" class="bar-block darkish hide hide-large hide-medium">
+        <a href="/Website/index.html" class="bar-item button" onclick="toggleFunction()">Home</a>
+        <a href="/Website/projects.html" class="bar-item button" onclick="toggleFunction()">Projects</a>
+        <a href="/Website/music.html" class="bar-item button" onclick="toggleFunction()">Music</a>
+        <a href="/Website/art.html" class="bar-item button" onclick="toggleFunction()">Art</a>
+        <a href="/Website/blog.html" class="bar-item button" onclick="toggleFunction()">Blog</a>
+        <a href="/Website/about_me.html" class="bar-item button" onclick="toggleFunction()">About Me</a>
+        <a href="/Website/contact.html" class="bar-item button" onclick="toggleFunction()">Contact</a>
+      </div>
+    </div>
+  </div>
+    
+<!-- Page content -->
+<div class="content padding" style="max-width:1564px">
+
+  <!-- Blog section... -->
+  <div class="container padding-32" id="blog">
+  </div>
+
+  <!-- Header -->
+  <div>
+  <h1 style="font-size: 50px" class="center"><b>Notch's Procedural Textures</b></h1>
+  </div>
+  <div>
+  <h4 class="center">Dec 25, 2022 - Written by Pseudonym_Tim</h4>
+    
+</div>
+    <p class="oneColumnP">
+      <br>
+      <img class="croppedImage centerImage" src="/Website/img/blog/blog_(12-25-2022)/notch-js-fiddle.png" style="width:100%; max-width:40%"/>
+      <br>
+     Merry christmas! Okay, so I've been interested in procedural generation for a while now, and one day I stumbled across a neat little tech demo that the creator of Minecraft made back in 2012!
+     <br>Apparently he ported a bit of his previous Minecraft 4k project for fun or something and this is the result, you can mess around with it in jsfiddle here: <a href = "http://jsfiddle.net/uzMPU/">http://jsfiddle.net/uzMPU/</a>
+     <br>
+     <br>
+     Anyway, I thought that it was pretty interesting how the textures of the blocks were generated entirely through code, so thought I'd explain exactly what's going on here with
+     Notch's seemingly inconceivable voodoo mathematics!
+     <br>
+     <br>
+     Most of what we want to focus on all happens inside of the <code>init()</code> function, so let's just start with an overview of it and how the textures are created in general...
+     <br>
+     <br>
+     <img class="croppedImage centerImage" src="/Website/img/blog/blog_(12-25-2022)/init.png" style="width:100%; max-width:35%"/>
+     <br>
+     <br>
+     The <code>init()</code> function creates the textures for the blocks and stores them in a texture map to reference later when rendering. 
+     It does this by setting the color and brightness of each pixel in 16 different textures. 
+     Each block being initialized (denoted and checked by the index of <code>i</code>) has
+     some mathmatical rules and patterns that set different pixel colors and brightnesses for the textures. 
+     <br>
+     <br>
+     Basically, you can just think of the entire process as each of the 16x16 textures being created pixel-by-pixel inside of an art program, except the whole program magically does all the 
+     color changes and pixel placements without any user input, and it compiles them all into a texture atlas (the texmap array).
+     <br>
+     <br>Some pretty simple things are done to all of these textures to make them not look like complete garbage: The bottom texture of each block has it's brightness halved to convey that it's shadowed, 
+     but more importantly, the brightness of each pixel is randomly modified to add variability to the appearance of the texture, 
+     otherwise the blocks would look VERY bland and boring. 
+     <br>
+     <br>
+     Here's what the blocks would look like without this random pixel brightness:
+     <br>
+     <br>
+     <img class="croppedImage centerImage" src="/Website/img/blog/blog_(12-25-2022)/no-brightness.png" style="width:100%; max-width:50%"/>
+      <br>
+      <br>
+      Awful, right? Okay, cool! We know what the <code>init()</code> function does, and how the textures are made from a technical standpoint, but I want to delve into the fun stuff!
+      How are the specific textures for the blocks actually created, and what are the rules used to make them? What is this pixel pushing sourcery?
+      <br>
+      <br>
+      First off, something that should be noted is that all texture pixels start out as brown for their base color by default, but it's swapped out for most blocks,
+      only the grass and dirt blocks make use of it!
+      <br>
+      <br>
+      <img class="croppedImage centerImage" src="/Website/img/blog/blog_(12-25-2022)/dirt.png" style="width:100%; max-width:35%"/>
+      <br>
+      <br>
+      The dirt and "water" blocks are easy, they literally just swap out the base color, and have 
+      their brightness randomized just like basically every other block, BORING!
+      <br>
+      <br>
+      <img class="croppedImage centerImage" src="/Website/img/blog/blog_(12-25-2022)/dirt.png" style="width:100%; max-width:35%"/>
+      <br>
+      <br>
+      <img class="croppedImage centerImage" src="/Website/img/blog/blog_(12-25-2022)/water.png" style="width:100%; max-width:20%"/>
+      <br>
+      <br>
+      <br>
+      The stone block is also pretty similar to the dirt and water blocks, except it is the only texture whose brightness is not modified for every pixel in the texture map,
+      making it much simpler!
+      <br>
+      <br>
+      <img class="croppedImage centerImage" src="/Website/img/blog/blog_(12-25-2022)/stone.png" style="width:100%; max-width:30%"/>
+      <br>
+      <br>
+      The leaf block is a little bit more interesting, essentially the pixel color is set to a shade of green, and there's a 50% chance that the pixel color is
+      set to be completely transparent instead!
+      <br>
+      <br>
+      <img class="croppedImage centerImage" src="/Website/img/blog/blog_(12-25-2022)/leaf.png" style="width:100%; max-width:25%"/>
+      <br>
+      <br>
+      The brick block is cool, basically, every 8 pixels on the x axis then every 4 pixels on the y axis are given a beige color for the spacing of the 
+      bricks, and all other pixels retain a red color!
+      <br>
+      <br>
+      <img class="croppedImage centerImage" src="/Website/img/blog/blog_(12-25-2022)/brick.png" style="width:100%; max-width:30%"/>
+      <br>
+      <br>
+      The grass block is actually really interesting!
+      <br>
+      <br>
+      <img class="croppedImage centerImage" src="/Website/img/blog/blog_(12-25-2022)/grass.png" style="width:100%; max-width:55%"/>
+      <br>
+      <br>
+      The <code>y < (((x * x * 3 + x * 81) >> 2) & 3) + 19</code> condition essentially sets all the pixels
+      that are meant to be the top of the grass block to a greenish grassy color. Also most pixels near the top of what is going to be the side texture are 
+      set to be a greenish grassy color as well, in a sorta "zig-zag" pattern from the bottom, depending on the x coordinate of the pixel evaluated like so:
+      <li>For x values of 0 to 7, the range is 19 to 22</li>
+      <li>For x values of 8 to 15, the range is 18 to 21</li>
+      <li>For x values of 0 to 7, the range is 17 to 20</li>
+      <li>For x values of 8 to 15, the range is 16 to 19</li>
+      <br>
+      It's pretty hard to articulate what I mean by that, so I made this diagram to hopefully give you a better idea of understanding:
+      <br>
+      <br>
+      <img class="croppedImage centerImage img-pixelated" src="/Website/img/blog/blog_(12-25-2022)/grass_example.png" style="width:100%; max-width:15%"/>
+      <br>
+      <div class ="center">
+      <li>T = Top of grass block</li>
+      <li>S = Sides of grass block</li>
+      <li>B = Bottom of grass block</li>
+      </div>
+      <br>
+      The dark green is all the pixels that are set by the <code>y < (((x * x * 3 + x * 81) >> 2) & 3) + 19</code> condition! The pixels that aren't set are the default brown color that 
+      every texture initially has!
+      Finally, all that is done next is the same check except instead of adding 19 it only adds 18, and since this
+      check is in an else if statement, this causes us to only care only about the pixels underneath the ones placed in the previous check.
+      Those pixels are darkened by a third, giving the grassy parts more depth by darkening the dirt pixels directly underneath!
+      <br>
+      <br>
+      <img class="croppedImage centerImage" src="/Website/img/blog/blog_(12-25-2022)/wood.png" style="width:100%; max-width:35%"/>
+      
+      <br>
+      <br>
+      And finally, the wood texture, which is probably my favorite! The top and bottom textures are given a light wood color in a 14x14 area from the center of the texture. The brightness of these pixels are adjusted based on their distance, with pixels closer to the center being brighter and pixels farther away being darker.
+      For the side texture, the brightness of each pixel is adjusted based on the x value of the pixel evaluated. The brightness is reduced by 50% for pixels in odd-numbered columns and is not modified for pixels in even-numbered columns.
+      <br>
+      <br>
+    Honestly all of the mathmatics here really broke my brain when I first saw it all, but after studying this stuff and understanding it, I came to realize that 
+    Notch is actually pretty damn genius when it comes to mathematics and visualization skills. I suppose you kinda have to be real great at math if you make your own game engines, so maybe I shouldn't be impressed!
+    <br>
+    <br>Anyways, I hope that you found this as interesting as I have! Bye!
+    <br>
+    </p>
+    </div>
+    <div>

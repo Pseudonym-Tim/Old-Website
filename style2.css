@@ -12,6 +12,15 @@
 	align-items: center
 }
 
+code 
+{
+	color: crimson;
+	background-color: #1a1a1a;
+	text-shadow: none;
+	padding: 2px;
+	font-size: 105%;
+}
+
 .project-item img 
 {
 	width: 85%;
