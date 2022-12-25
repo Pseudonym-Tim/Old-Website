@@ -10,6 +10,14 @@ html{
     -ms-text-size-adjust:100%;
     -webkit-text-size-adjust:100%
 }
+
+.img-pixelated
+{
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
 body{
     margin:0
 }
