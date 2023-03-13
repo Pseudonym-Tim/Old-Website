@@ -38,12 +38,19 @@ code
 	}
 }
 
-.image-gallery 
+.image-gallery {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 65px;
+	padding-bottom: 10px;
+  }
+
+.image-art-gallery 
 {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 2.5%;
-	padding-bottom: 10px; /* or any other value you want to use */
+	padding-bottom: 10px;
 }
 
 .image-item 
@@ -51,6 +58,7 @@ code
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	min-height: 400px;
 }
 
 .image-item img 
